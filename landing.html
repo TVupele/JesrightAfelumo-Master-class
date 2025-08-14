@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn ChatGPT Into Cash - 5-Day Masterclass</title>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --light: #f1f5f9;
+            --dark: #0f172a;
+            --success: #25D366;
+            --danger: #ef4444;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .countdown {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%232563eb" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,122.7C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom no-repeat, white;
+            background-size: contain;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .hero-badge {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(245, 158, 11, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            color: var(--gray);
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.25);
+            border: 5px solid white;
+        }
+        
+        .image-badge {
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            background: var(--accent);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            transform: rotate(5deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Registration Form */
+        .registration {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-header p {
+            color: var(--gray);
+        }
+        
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-payment {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-payment:hover {
+            background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+        }
+        
+        .btn-payment:after {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: right 0.3s;
+        }
+        
+        .btn-payment:hover:after {
+            right: 15px;
+        }
+        
+        .seats-left {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* Payment Processing */
+        .payment-container {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border: 1px solid var(--light-gray);
+            display: none;
+        }
+        
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Success Section */
+        .whatsapp-success {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--success) 0%, #128C7E 100%);
+            color: white;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-button {
+            background: white;
+            color: var(--success);
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .whatsapp-button i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent);
+        }
+        
+        .benefit-icon {
+            background-color: rgba(37, 99, 235, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card p {
+            color: var(--gray);
+        }
+        
+        /* For Whom Section */
+        .audience {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .audience-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: 10px;
+            background-color: var(--light);
+            transition: all 0.3s;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, white 0%, var(--light) 100%);
+        }
+        
+        .audience-card div {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .audience-card h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .audience-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Instructor Section */
+        .instructor {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+        }
+        
+        .instructor-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .instructor-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .instructor-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.25);
+            border: 5px solid white;
+        }
+        
+        .instructor-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .instructor-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .instructor-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .instructor-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .credentials {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .credential-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            color: var(--dark);
+        }
+        
+        .testimonial-text:before {
+            content: "“";
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            color: rgba(37, 99, 235, 0.1);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .author-info {
+            margin-left: 1rem;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            display: none;
+            color: var(--gray);
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .faq-question span {
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .countdown {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Jesright<span>Afelumo</span>Masterclass</div>
+            <div class="countdown">🚀 Registration closes in: <span id="timer">05d 00h 00m 00s</span></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">5-DAY INTENSIVE TRAINING</div>
+                <h1>Turn ChatGPT Into <span class="hero-highlight">$1,387/Month</span> Even As A Complete Beginner</h1>
+                <p class="hero-subtitle">Join our live training from September 1-5 and unlock AI-powered income streams with step-by-step guidance</p>
+                
+                <!-- Registration Form -->
+                <div class="registration" id="registrationForm">
+                    <div class="form-header">
+                        <h2>Secure Your Spot Now</h2>
+                        <p>Only ₦3,000 for lifetime access to training materials</p>
+                    </div>
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">WhatsApp Number</label>
+                            <input type="tel" id="phone" required placeholder="Enter your WhatsApp number">
+                        </div>
+                        <button type="button" id="payButton" class="btn btn-payment">Pay ₦3,000 & Register Now</button>
+                        <div class="seats-left">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span id="seatsCount">Only 247 seats remaining!</span>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Payment Processing UI -->
+                <div class="payment-container" id="paymentProcessing">
+                    <h3>Processing Your Payment...</h3>
+                    <div class="loader"></div>
+                    <p>Please wait while we process your payment. Do not close this window.</p>
+                </div>
+                
+                <!-- Success Message -->
+                <div class="whatsapp-success" id="whatsappSuccess">
+                    <h2><i class="fas fa-check-circle"></i> Registration Successful!</h2>
+                    <p>Thank you for joining the ChatGPT Cash Masterclass!</p>
+                    <p>Click the button below to join your exclusive WhatsApp group for training materials and updates:</p>
+                    <a href="#" class="whatsapp-button" id="whatsappLink">
+                        <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                    </a>
+                    <p>You'll be automatically redirected in <span id="redirectCount">5</span> seconds...</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./images/heroimage.jpg" alt="AI Cash Masterclass">
+                <div class="image-badge">Limited Spots!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>What You'll Learn</h2>
+                <p>Action-packed training with immediate income potential</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Proven Monetization Methods</h3>
+                    <p>Transform ChatGPT into 5 income streams even without products or existing audience</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Time-Saving AI Systems</h3>
+                    <p>Automate 20+ hours/week with our proprietary workflow templates</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Instant Business Setup</h3>
+                    <p>Structure your AI service business in 1 day (legal, pricing, client acquisition)</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Wealth Mindset Training</h3>
+                    <p>Overcome mental blocks holding back beginners from achieving success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Whom Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who This Is For</h2>
+                <p>Perfect for complete beginners to seasoned professionals</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div>👨‍💼</div>
+                    <h3>Job Seekers</h3>
+                    <p>Add AI skills to stand out in the job market</p>
+                </div>
+                <div class="audience-card">
+                    <div>🚀</div>
+                    <h3>Startups</h3>
+                    <p>Cut costs with AI automation solutions</p>
+                </div>
+                <div class="audience-card">
+                    <div>💼</div>
+                    <h3>Entrepreneurs</h3>
+                    <p>Scale your business without hiring more staff</p>
+                </div>
+                <div class="audience-card">
+                    <div>🔧</div>
+                    <h3>Side Hustlers</h3>
+                    <p>Launch a profitable income stream in 48 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor">
+        <div class="container instructor-container">
+            <div class="instructor-image">
+                <img src="./images/jesright.jpg" alt="Jesright Afelumo">
+                <div class="instructor-badge">Your Instructor</div>
+            </div>
+            <div class="instructor-info">
+                <h2>Jesright Afelumo</h2>
+                <p>HR & Digital Solutions Professional with 6+ years of experience transforming businesses through AI implementation.</p>
+                <p>Having trained over 5,000 professionals, Jesright specializes in making complex AI systems accessible to complete beginners.</p>
+                <p>His students have generated over $630k in new income using the exact methods taught in this workshop.</p>
+                
+                <div class="credentials">
+                    <div class="credential-badge">5K+ Trained</div>
+                    <div class="credential-badge">6+ Years Experience</div>
+                    <div class="credential-badge">$630K+ Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>From students who transformed their income with AI</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I went from unemployed to $3,500/month in 60 days using just ChatGPT. This training gave me the exact blueprint!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">👩‍💼</div>
+                        <div class="author-info">
+                            <h4>Temi O.</h4>
+                            <p>Freelance AI Content Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "My startup cut operational costs by 40% and doubled output using the automation systems from this workshop."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">👨‍💼</div>
+                        <div class="author-info">
+                            <h4>Obinna Chukwuemeka</h4>
+                            <p>Tech Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As a complete beginner, I made $800 in my first week offering AI services. The step-by-step guidance was priceless!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">👩‍💻</div>
+                        <div class="author-info">
+                            <h4>Suleiman Isah</h4>
+                            <p>Side Hustler to Full-Time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container faq-container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is this training really worth ₦3,000? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! This training normally costs ₦15,000, but we're offering it at a special launch price of ₦3,000 for the first 300 registrants. You'll receive lifetime access to all training materials and the private community.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What if I can't attend live? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>All sessions will be recorded and available in your private portal. You'll have lifetime access to all materials, so you can learn at your own pace.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do I need prior AI experience? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No prior experience is needed! This training is designed for complete beginners. We start from the fundamentals and build step-by-step.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What payment methods do you accept? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major debit/credit cards through our secure Paystack payment gateway. You can also pay via bank transfer if you prefer.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is there a money-back guarantee? <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer a 7-day money-back guarantee. If you're not satisfied with the training for any reason, simply contact us for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="hero" style="padding: 3rem 0; background: white;">
+        <div class="container">
+            <div class="registration" style="max-width: 800px;">
+                <div class="form-header">
+                    <h2>Ready to Transform Your Income?</h2>
+                    <p>September 1-5, 2025 • 8:00 PM Daily (GMT+1)</p>
+                    <p style="color: var(--primary); font-weight: 600; margin-top: 1rem;">Only <span id="finalSeatsCount">247</span> seats remaining at this price!</p>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button id="finalPayButton" class="btn btn-payment" style="max-width: 400px; margin: 0 auto;">Secure My Spot for ₦3,000</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="font-size: 2rem; margin-bottom: 1rem;">AI<span>Cash</span>Masterclass</div>
+                <p>© 2025 Jesright Afelumo Masterclass. All rights reserved.</p>
+                <p class="disclaimer">Results not typical. Your outcomes depend on implementation effort. This is not a get-rich-quick scheme.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countDownDate = new Date("Aug 31, 2025 23:59:59").getTime();
+        
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("timer").innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "REGISTRATION CLOSED!";
+            }
+        }, 1000);
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                    ans.parentElement.classList.remove('active');
+                });
+                
+                // Toggle current answer
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Update seats remaining every 30 seconds (simulated)
+        function updateSeats() {
+            const seatsElements = document.querySelectorAll('#seatsCount, #finalSeatsCount');
+            let seats = parseInt(seatsElements[0].textContent.match(/\d+/)[0]);
+            
+            if (seats > 0) {
+                const seatsTaken = Math.floor(Math.random() * 3) + 1;
+                seats -= seatsTaken;
+                if (seats < 0) seats = 0;
+                
+                seatsElements.forEach(el => {
+                    el.innerHTML = `Only ${seats} seat${seats !== 1 ? 's' : ''} remaining!`;
+                });
+            }
+        }
+        
+        setInterval(updateSeats, 30000);
+        
+        // Paystack integration
+        function processPayment(name, email, phone) {
+            // Show payment processing
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('paymentProcessing').style.display = 'block';
+            
+            // Initialize Paystack payment
+            const handler = PaystackPop.setup({
+                key: 'pk_live_df7e84930bc8419b8474019c97d381f504828bf9', // Replace with your Paystack public key
+                email: email,
+                amount: 300000, // 3000 Naira in kobo
+                currency: 'NGN',
+                metadata: {
+                    name: name,
+                    phone: phone
+                },
+                callback: function(response) {
+                    // On successful payment
+                    document.getElementById('paymentProcessing').style.display = 'none';
+                    document.getElementById('whatsappSuccess').style.display = 'block';
+                    
+                    // Prepare WhatsApp link
+                    const message = encodeURIComponent(
+                        `Hello! I've registered for the ChatGPT Cash Masterclass.\n\n` +
+                        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n` +
+                        `Transaction ID: ${response.reference}`
+                    );
+                    
+                    // Set WhatsApp link
+                    const whatsappLink = document.getElementById('whatsappLink');
+                    whatsappLink.href = `https://wa.me/2348130084366?text=${message}`;
+                    
+                    // Auto-redirect to WhatsApp
+                    let count = 5;
+                    const countdownElement = document.getElementById('redirectCount');
+                    const countdown = setInterval(() => {
+                        countdownElement.textContent = count;
+                        if (count <= 0) {
+                            clearInterval(countdown);
+                            window.location.href = whatsappLink.href;
+                        }
+                        count--;
+                    }, 1000);
+                },
+                onClose: function() {
+                    // On payment modal close
+                    document.getElementById('paymentProcessing').style.display = 'none';
+                    document.getElementById('registrationForm').style.display = 'block';
+                    alert('Payment cancelled. Your spot is not reserved yet.');
+                }
+            });
+            
+            handler.openIframe();
+        }
+        
+        // Payment button handlers
+        document.getElementById('payButton').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !email || !phone) {
+                alert('Please fill all fields');
+                return;
+            }
+            
+            processPayment(name, email, phone);
+        });
+        
+        document.getElementById('finalPayButton').addEventListener('click', function() {
+            // Scroll to registration form
+            document.querySelector('.hero').scrollIntoView({ behavior: 'smooth' });
+            
+            // Focus on name field
+            setTimeout(() => {
+                document.getElementById('name').focus();
+            }, 800);
+        });
+    </script>
+</body>
+</html>
